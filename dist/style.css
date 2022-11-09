@@ -1,0 +1,150 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--background-primary);
+  color: var(--text-color);
+}
+
+:root {
+  --background-primary: hsl(225, 100%, 94%);
+  --background-button: hsl(245, 75%, 52%);
+  --background-card: hsl(0, 0%, 100%);
+  --background-price: hsl(225, 100%, 98%);
+  --text-color: hsl(224, 23%, 55%);
+  --heading-color: hsl(223, 47%, 23%);
+}
+
+:root {
+  --font-primary: "Red Hat Display", sans-serif;
+}
+
+/*
+  // Centering Block
+
+  // max-width: 1000px;
+
+  // margin: 0 auto;
+  margin-inline: auto;
+
+  // padding-left: 20px;
+  // padding-right: 20px;
+  width: min(100% - u.rem(40), u.rem(1000));
+  */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  width: min(100% - 2.5rem, 20.5rem);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  height: 35.5rem;
+  background-color: var(--background-card);
+  border-radius: 0.625rem;
+}
+.card__image {
+  background: url("/images/illustration-hero.svg") no-repeat center center/cover;
+  border-radius: 0.625rem 0.625rem 0 0;
+  max-width: 100%;
+  min-height: 10rem;
+}
+.card__description {
+  padding: 1.5rem;
+}
+.card__header {
+  color: var(--heading-color);
+  font-weight: 900;
+}
+.card__text {
+  line-height: 1.4;
+  margin-bottom: 1.5625rem;
+}
+.card__offer {
+  border-radius: 0.625rem;
+  background-color: var(--background-price);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.4375rem;
+}
+.card__offer.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-right: 1.875rem;
+}
+.card__offer.price span:first-child {
+  color: var(--heading-color);
+  font-weight: 700;
+}
+.card__offer span a {
+  font-weight: 700;
+  color: var(--background-button);
+  text-decoration: underline;
+}
+.card__offer span a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+.card__cta {
+  background-color: var(--background-button);
+  padding: 0.9375rem;
+  margin-top: 1.4375rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.3490196078) 0px 7px 50px 1px;
+}
+.card__cta:hover {
+  opacity: 0.7;
+}
+.card__cta a {
+  font-weight: 800;
+  color: #fff;
+}
+.card__cancel {
+  margin-top: 2.125rem;
+}
+.card__cancel a {
+  color: var(--text-color);
+}
+.card__cancel a:hover {
+  color: var(--heading-color);
+  font-weight: 800;
+}/*# sourceMappingURL=style.css.map */

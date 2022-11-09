@@ -1,0 +1,94 @@
+@use '../utilities' as *;
+
+.card {
+  text-align: center;
+  height: rem(568);
+  background-color: var(--background-card);
+  border-radius: rem(10);
+
+  &__image {
+    background: url('/images/illustration-hero.svg') no-repeat center center /
+      cover;
+    border-radius: rem(10) rem(10) 0 0;
+    max-width: 100%;
+    min-height: rem(160);
+  }
+
+  &__description {
+    padding: rem(24);
+  }
+
+  &__header {
+    color: var(--heading-color);
+    font-weight: 900;
+  }
+
+  &__text {
+    line-height: 1.4;
+    margin-bottom: rem(25);
+  }
+
+  &__offer {
+    border-radius: rem(10);
+    background-color: var(--background-price);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: rem(7);
+
+    &.price {
+      display: flex;
+      flex-direction: column;
+      gap: rem(2);
+      margin-right: rem(30);
+
+      & span:first-child {
+        color: var(--heading-color);
+        font-weight: 700;
+      }
+    }
+
+    & span a {
+      font-weight: 700;
+      color: var(--background-button);
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.7;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__cta {
+    background-color: var(--background-button);
+    padding: rem(15);
+    margin-top: rem(23);
+    border-radius: rem(10);
+    cursor: pointer;
+    box-shadow: #00000059 0px 7px 50px 1px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    & a {
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+
+  &__cancel {
+    margin-top: rem(34);
+
+    & a {
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--heading-color);
+        font-weight: 800;
+        // opacity: 0.7;
+      }
+    }
+  }
+}

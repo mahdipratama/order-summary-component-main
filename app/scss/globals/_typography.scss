@@ -1,4 +1,4 @@
-@use '../utilities' as u;
+@use '../utilities' as *;
 
 h1,
 h2,
@@ -16,5 +16,5 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
-  color: #fff;
+  // color: #fff;
 }
