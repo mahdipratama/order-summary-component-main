@@ -15,6 +15,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-primary);
+  background: url('/images/pattern-background-desktop.svg') no-repeat top center;
   background-color: var(--background-primary);
   color: var(--text-color);
+
+  @include breakpoint-up(x-large) {
+    background: url('/images/pattern-background-desktop.svg') no-repeat center /
+      cover;
+    background-color: var(--background-primary);
+  }
+
+  @include breakpoint-down(small) {
+    background: url('/images/pattern-background-mobile.svg') no-repeat top
+      center;
+    background-color: var(--background-primary);
+  }
 }

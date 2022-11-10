@@ -20,7 +20,11 @@ body {
 }
 
 .container {
-  width: min(100% - rem(40), rem(328));
+  max-width: rem(452);
   margin-inline: auto;
   overflow: hidden;
+
+  @include breakpoint-down(small) {
+    width: min(100% - rem(40));
+  }
 }

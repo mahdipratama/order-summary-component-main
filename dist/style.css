@@ -13,8 +13,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-primary);
+  background: url("/images/pattern-background-desktop.svg") no-repeat top center;
   background-color: var(--background-primary);
   color: var(--text-color);
+}
+@media (min-width: 90rem) {
+  body {
+    background: url("/images/pattern-background-desktop.svg") no-repeat center/cover;
+    background-color: var(--background-primary);
+  }
+}
+@media (max-width: 34.375rem) {
+  body {
+    background: url("/images/pattern-background-mobile.svg") no-repeat top center;
+    background-color: var(--background-primary);
+  }
 }
 
 :root {
@@ -50,9 +63,14 @@ body {
 }
 
 .container {
-  width: min(100% - 2.5rem, 20.5rem);
+  max-width: 28.25rem;
   margin-inline: auto;
   overflow: hidden;
+}
+@media (max-width: 34.375rem) {
+  .container {
+    width: min(100% - 2.5rem);
+  }
 }
 
 h1,
@@ -75,26 +93,58 @@ a:active {
 
 .card {
   text-align: center;
-  height: 35.5rem;
+  min-height: 35.5rem;
   background-color: var(--background-card);
   border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 34.4375rem) {
+  .card {
+    min-height: 43.5625rem;
+  }
 }
 .card__image {
   background: url("/images/illustration-hero.svg") no-repeat center center/cover;
   border-radius: 0.625rem 0.625rem 0 0;
   max-width: 100%;
-  min-height: 10rem;
+  height: 10rem;
+}
+@media (min-width: 34.4375rem) {
+  .card__image {
+    height: 13.875rem;
+    margin-bottom: 1.875rem;
+  }
 }
 .card__description {
   padding: 1.5rem;
+}
+@media (min-width: 34.4375rem) {
+  .card__description {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 .card__header {
   color: var(--heading-color);
   font-weight: 900;
 }
+@media (min-width: 34.4375rem) {
+  .card__header {
+    font-size: 1.5rem;
+  }
+}
 .card__text {
   line-height: 1.4;
   margin-bottom: 1.5625rem;
+}
+@media (min-width: 34.4375rem) {
+  .card__text {
+    font-size: 1rem;
+    margin-bottom: 1.3125rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 .card__offer {
   border-radius: 0.625rem;
@@ -138,6 +188,11 @@ a:active {
   font-weight: 800;
   color: #fff;
 }
+@media (min-width: 34.4375rem) {
+  .card__cta {
+    margin-top: 1.9375rem;
+  }
+}
 .card__cancel {
   margin-top: 2.125rem;
 }
@@ -147,4 +202,9 @@ a:active {
 .card__cancel a:hover {
   color: var(--heading-color);
   font-weight: 800;
+}
+@media (min-width: 34.4375rem) {
+  .card__cancel {
+    margin-top: 1.9375rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,31 +1,58 @@
-@use '../utilities' as *;
+@use '../utilities/' as *;
 
 .card {
   text-align: center;
-  height: rem(568);
+  min-height: rem(568);
   background-color: var(--background-card);
   border-radius: rem(10);
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    min-height: rem(697);
+  }
 
   &__image {
     background: url('/images/illustration-hero.svg') no-repeat center center /
       cover;
     border-radius: rem(10) rem(10) 0 0;
     max-width: 100%;
-    min-height: rem(160);
+    height: rem(160);
+
+    @include breakpoint-up(medium) {
+      height: rem(222);
+      margin-bottom: rem(30);
+    }
   }
 
   &__description {
     padding: rem(24);
+
+    @include breakpoint-up(medium) {
+      padding-left: rem(48);
+      padding-right: rem(48);
+    }
   }
 
   &__header {
     color: var(--heading-color);
     font-weight: 900;
+
+    @include breakpoint-up(medium) {
+      font-size: rem(24);
+    }
   }
 
   &__text {
     line-height: 1.4;
     margin-bottom: rem(25);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(16);
+      margin-bottom: rem(21);
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
   }
 
   &__offer {
@@ -76,6 +103,10 @@
       font-weight: 800;
       color: #fff;
     }
+
+    @include breakpoint-up(medium) {
+      margin-top: rem(31);
+    }
   }
 
   &__cancel {
@@ -89,6 +120,10 @@
         font-weight: 800;
         // opacity: 0.7;
       }
+    }
+
+    @include breakpoint-up(medium) {
+      margin-top: rem(31);
     }
   }
 }
