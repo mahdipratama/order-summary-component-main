@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://github.com/mahdipratama/order-summary-component-main)
-- [Live version](https://app.netlify.com/sites/inquisitive-swan-3605ef/overview)
+- [Live version](https://inquisitive-swan-3605ef.netlify.app)
 
 ## My process
 
